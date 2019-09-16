@@ -5,23 +5,18 @@ void setup()
   
   // Colocamos o pino 12 do Arduino como OUTPUT (saída)
   pinMode(13, OUTPUT);
-
-  Serial.write("PROGRAMA INICIADO!");
 }
 
 void loop() 
 {
   if (Serial.available()) {
-    char c = Serial.read();
-    Serial.write("Recebido: " + c);
+    char c = Serial.read();    
 
-    if (c == 'L') {
-      Serial.write("LIGANDO...");
+    if (c == 'L') {      
       digitalWrite(13, HIGH);
     }
 
-    if (c == 'D') {
-      Serial.write("DESLIGANDO...");
+    if (c == 'D') {      
       digitalWrite(13, LOW);
     }
   }  
