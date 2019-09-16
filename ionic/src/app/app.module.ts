@@ -18,7 +18,7 @@ Fonte:
 https://stackoverflow.com/questions/48702611/mqtt-connection-with-ionic-3
 https://sclausen.github.io/ngx-mqtt/
 
-Obs: O server MQTT deve estar configurado para aceitas WebSocket.
+Obs: O server MQTT deve estar configurado para aceitar WebSockets.
 No mosquito, em mosquitto.conf, add:
     listener 1883
     listener 9001
@@ -32,12 +32,12 @@ Obs 2: O suporte a WebSocket foi implantado no Mosquitto a partir da versar 1.5.
 
 
 export const MQTT_SERVICE_OPTIONS: IMqttServiceOptions = {
-  hostname: 'soldier.cloudmqtt.com',
-  port: 33919,
+  hostname: '127.0.0.1',
+  port: 1883,
   path: '/',
-  username: 'nmrbnrst',
-  password: 'F8OUh79L_T07',
-  clientId: '312312312312ljkfslkjfalskd092',
+  username: 'user',
+  password: 'pass',
+  clientId: 'ClientId',
   protocol: 'wss'
 };
 
