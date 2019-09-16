@@ -1,6 +1,6 @@
-# CONECTAR A UM BROKER MQTT COM USUARIO E SENHA
+# CONECTAR A UM BROKER MQTT COM USUARIO E SENHA.
 # ENVIAR COMANDO PARA PORTA SERIAL DE ACORDO
-# COM A MENSAGEM RECEBIDA
+# COM A MENSAGEM RECEBIDA.
 # ---------------------------------------------
 # instalar o paho-mqtt:
 # python -m pip  install paho-mqtt
@@ -12,10 +12,10 @@
 import paho.mqtt.client as mqtt
 import serial
 
-SERVIDOR = "soldier.cloudmqtt.com"
-PORTA    = 13919 
-USUARIO  = "nmrbnrst"
-SENHA    = "F8OUh79L_T07"
+SERVIDOR = "127.0.0.1"
+PORTA    = 1883 
+USUARIO  = "user"
+SENHA    = "pass"
 TOPICO   = "casa/quarto"
 
 PORTA_COM = "COM5"
