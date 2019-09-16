@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1>CLIENT MQTT</h1>
+
+    Mensagem Recebida:<br> 
+    <b>{{msg_recebida}}</b>
+
+    <br><br>
+    
+    <ion-item>
+        <ion-label stacked>Mensagem:</ion-label>
+        <ion-input type="text" [(ngModel)]="msg_enviar"></ion-input>
+    </ion-item>
+    
+    <ion-button (click)="publishMessage()" >Publicar Mensagem</ion-button>
+    <br><br>
+    <ion-button (click)="ligar()" >Ligar</ion-button>
+    <ion-button (click)="desligar()" >Desligar</ion-button>
+  </div>
+</ion-content>
