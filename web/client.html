@@ -2,7 +2,7 @@
     EXEMPLO CLIENTE MQTT EM JAVASCRIPT COM MQTT PAHO
     Fonte: https://www.eclipse.org/paho/clients/js/
 
-    Obs: O server MQTT deve estar configurado para aceitas WebSocket.
+    Obs: O server MQTT deve estar configurado para aceitar WebSockets.
     No mosquito, em mosquitto.conf, add:
         listener 1883
         listener 9001
@@ -19,7 +19,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
         <script>
             // Create a client instance
-            client = new Paho.MQTT.Client('soldier.cloudmqtt.com', Number('33919'), "clientId");
+            client = new Paho.MQTT.Client('127.0.0.1', Number('1883'), "clientId");
 
             // set callback handlers
             client.onConnectionLost = onConnectionLost;
@@ -28,10 +28,10 @@
             // connect the client
             client.connect({
 			    useSSL: true,
-				userName: 'nmrbnrst',
-				password: 'F8OUh79L_T07',
-				onSuccess: onConnect,
-				onFailure: onFailure
+			    userName: 'user',
+			    password: 'password',
+			    onSuccess: onConnect,
+			    onFailure: onFailure
 			});
 
             // called when the client connects
@@ -56,9 +56,9 @@
                 console.log("onMessageArrived:"+message.payloadString);
             }
 
-			function onFailure(e) {
-				console.log('Erro ao conectar: ' + e);
-			}			
+	    function onFailure(e) {
+		console.log('Erro ao conectar: ' + e);
+	    }			
         </script>
     </head>
     <body>
